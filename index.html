@@ -56,25 +56,23 @@
                             </button>
                         </div>
                     </div>
-                    <div class="col-6 m-auto"> <!-- to do list -->
+                    <div class="col-7 m-auto"> <!-- to do list -->
                         <div class="card p-5  border-black">
-
                             <!-- UL for tasks -->
                             <ul v-if="tasks.length != 0" class="p-0">
                                 <li v-for="(task, index) in tasks"
                                     class="border-bottom py-3 d-flex justify-content-between">
                                     <!-- tasks text -->
                                     <div
-                                        :class="(task.done === true) ? 'done' : '' ">
+                                        :class="(task.done === true) ? 'done' : '' " @click="doneNotDone(index)">
                                         {{task.text}}
                                     </div>
                                     <!-- tasks cross -->
-                                    <div @click="removeTask(index)">
+                                    <div @click="removeTask()">
                                         <i class="fa-solid fa-eraser fa-xl"></i>
                                     </div>
                                 </li>
                             </ul>
-
                         </div>
                     </div>
                 </div>

@@ -13,8 +13,10 @@ createApp({
     data() {
         return {
 
+            //empty object for added task
             newTask : '',
 
+            //validator for empty input
             error : false,
 
             tasks: [
@@ -63,6 +65,7 @@ createApp({
                 this.newTask = '';
                 this.error = false;
 
+              //if input is empty  
             } else {
 
                 this.error = true;                              
@@ -70,6 +73,20 @@ createApp({
             }
 
         },
+
+        doneNotDone (index) {            
+
+            if (this.tasks[index].done === false) {
+
+                this.tasks[index].done = true;
+                
+            } else {
+
+                this.tasks[index].done = false;
+                
+            }
+                
+        }
 
     }
 
