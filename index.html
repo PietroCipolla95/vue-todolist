@@ -44,6 +44,7 @@
                             </h2>
                             <input type="text"
                                 class="rounded-2 border-black"
+                                placeholder="Type a task"
                                 v-model="newTask"
                                 @keyup.enter="addTask(newTask)">
                                 <p v-if="error === true" class="pt-3 text-danger">
@@ -57,19 +58,19 @@
                         </div>
                     </div>
                     <div class="col-7 m-auto"> <!-- to do list -->
-                        <div class="card p-5  border-black">
+                        <div class="card p-5 border-black">
                             <!-- UL for tasks -->
                             <ul v-if="tasks.length != 0" class="p-0">
                                 <li v-for="(task, index) in tasks"
-                                    class="border-bottom py-3 d-flex justify-content-between">
+                                    class="border-bottom py-3 d-flex justify-content-between align-items-center">
                                     <!-- tasks text -->
                                     <div
                                         :class="(task.done === true) ? 'done' : '' " @click="doneNotDone(index)">
                                         {{task.text}}
                                     </div>
                                     <!-- tasks cross -->
-                                    <div @click="removeTask(index)">
-                                        <i class="fa-solid fa-eraser fa-xl"></i>
+                                    <div @click="removeTask(index)" id="erase" class="p-2">
+                                        <i id="erase" class="fa-solid fa-eraser fa-xl"></i>
                                     </div>
                                 </li>
                             </ul>

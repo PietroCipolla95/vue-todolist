@@ -6,3 +6,9 @@ body {
     text-decoration: line-through;
     text-decoration-color: lightcoral;
 }
+
+#erase:hover {
+    background-color: lightcoral;
+    border-radius: 25%;
+}
+
