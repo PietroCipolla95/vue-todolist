@@ -68,12 +68,12 @@
                                         {{task.text}}
                                     </div>
                                     <!-- tasks cross -->
-                                    <div @click="removeTask()">
+                                    <div @click="removeTask(index)">
                                         <i class="fa-solid fa-eraser fa-xl"></i>
                                     </div>
                                 </li>
                             </ul>
-                            <h2 v-else="tasks.length == 0">
+                            <h2 v-else="tasks.length == 0" class="m-0">
                                 No task 🥳 let's chill 🎮📽
                             </h2>
                         </div>
