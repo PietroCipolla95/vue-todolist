@@ -12,7 +12,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        
+
         tasks : [
             {
                 text : 'Pelare le patate 🥔',
@@ -40,6 +40,16 @@ const { createApp } = Vue
             },
         ],
 
-      }
     }
+},
+    method : {
+
+        removeTask(index) {
+
+            this.tasks[index].splice(0 ,1);
+
+        }
+
+    }
+
   }).mount('#app')

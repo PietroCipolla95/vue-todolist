@@ -41,14 +41,14 @@
                         <div class="card p-5">
 
                             <ul class="p-0"> <!-- UL for tasks -->
-                                <li v-for="(task, i) in tasks"
+                                <li v-for="(task, index) in tasks"
                                  class="border-bottom py-3 d-flex justify-content-between">
                                     <!-- tasks text -->
                                     <div :class="(task.done === true) ? 'done' : '' ">
                                         {{task.text}}
                                     </div>
                                     <!-- tasks cross -->
-                                    <div>
+                                    <div @click="removeTask(index)">
                                         <i class="fa-solid fa-eraser fa-xl"></i>
                                     </div>
                                 </li>
