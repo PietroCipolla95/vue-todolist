@@ -29,7 +29,7 @@
         <link rel="stylesheet" href="./assets/css/style.css">
 
     </head>
-    <body>
+    <body class="bg-info">
         <!-- #App vuejs -->
         <div id="app">
             <div class="container">
@@ -43,7 +43,9 @@
 
 
                             <ul>
-                                <li v-for="(task, i) in tasks">
+                                <li v-for="(task, i) in tasks"
+                                 class="border-bottom py-3"
+                                 :class="(task.done === true) ? 'done' : '' ">
                                     {{task.text}}
                                 </li>
                             </ul>
