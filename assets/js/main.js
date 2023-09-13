@@ -15,6 +15,8 @@ createApp({
 
             newTask : '',
 
+            error : false,
+
             tasks: [
                 {
                     text: 'Pelare le patate 🥔',
@@ -55,7 +57,16 @@ createApp({
 
         addTask(newTask) {
 
-            this.tasks.unshift({text : newTask, done : false})
+            if (newTask != '') {
+
+                this.tasks.unshift({text : newTask, done : false});
+                this.newTask = '';
+
+            } else {
+
+                this.error = true;                              
+                
+            }
 
         },
 
