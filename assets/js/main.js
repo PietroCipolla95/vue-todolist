@@ -13,11 +13,7 @@ createApp({
     data() {
         return {
 
-            newTask :{
-
-                
-
-            },
+            newTask : '',
 
             tasks: [
                 {
@@ -55,7 +51,13 @@ createApp({
 
             this.tasks.splice(index, 1);
 
-        }
+        },
+
+        addTask(newTask) {
+
+            this.tasks.unshift({text : newTask, done : false})
+
+        },
 
     }
 

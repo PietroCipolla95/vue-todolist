@@ -42,21 +42,26 @@
                             <h2 class="py-3">
                                 Aggiungi task
                             </h2>
-                            <input type="text" name="" id="" class="rounded-2 border-black">
-                            <button type="submit" class="btn btn-dark mt-5 w-50 p-1">
+                            <input type="text"
+                                class="rounded-2 border-black"
+                                v-model="newTask">
+                            <button type="submit"
+                                class="btn btn-dark mt-5 w-50 p-1" 
+                                @click="addTask(newTask)">
                                 Aggiungi task
                             </button>
                         </div>
                     </div>
                     <div class="col-6 m-auto"> <!-- to do list -->
                         <div class="card p-5  border-black">
-                            
+
                             <!-- UL for tasks -->
-                            <ul v-if="tasks.length != 0" class="p-0"> 
+                            <ul v-if="tasks.length != 0" class="p-0">
                                 <li v-for="(task, index) in tasks"
-                                 class="border-bottom py-3 d-flex justify-content-between">
+                                    class="border-bottom py-3 d-flex justify-content-between">
                                     <!-- tasks text -->
-                                    <div :class="(task.done === true) ? 'done' : '' ">
+                                    <div
+                                        :class="(task.done === true) ? 'done' : '' ">
                                         {{task.text}}
                                     </div>
                                     <!-- tasks cross -->
@@ -70,22 +75,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         </div>
 
