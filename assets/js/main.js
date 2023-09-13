@@ -9,47 +9,54 @@ Bonus: 1- oltre al click sul pulsante, intercettare anche il tasto ENTER per agg
 
 const { createApp } = Vue
 
-  createApp({
+createApp({
     data() {
-      return {
+        return {
 
-        tasks : [
-            {
-                text : 'Pelare le patate 🥔',
-                done : false,
-            },
-            {
-                text : 'Comprare regalo fidanzata 🎁',
-                done : true,
-            },
-            {
-                text : 'Cena con i colleghi 🥘',
-                done : false,
-            },
-            {
-                text : 'Serata Magic 🎴',
-                done : true,
-            },
-            {
-                text : 'Fare la spesa 🛒',
-                done : false,
-            },
-            {
-                text : 'Portare auto dal meccanico 🔧',
-                done : false,
-            },
-        ],
+            newTask :{
 
-    }
-},
-    method : {
+                
+
+            },
+
+            tasks: [
+                {
+                    text: 'Pelare le patate 🥔',
+                    done: false,
+                },
+                {
+                    text: 'Comprare regalo fidanzata 🎁',
+                    done: true,
+                },
+                {
+                    text: 'Cena con i colleghi 🥘',
+                    done: false,
+                },
+                {
+                    text: 'Serata Magic 🎴',
+                    done: true,
+                },
+                {
+                    text: 'Fare la spesa 🛒',
+                    done: false,
+                },
+                {
+                    text: 'Portare auto dal meccanico 🔧',
+                    done: false,
+                },
+            ],
+
+        }
+    },
+
+    methods: {
 
         removeTask(index) {
 
-            this.tasks[index].splice(index ,1);
+            this.tasks.splice(index, 1);
 
         }
 
     }
 
-  }).mount('#app')
+}).mount('#app')

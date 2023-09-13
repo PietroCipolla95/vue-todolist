@@ -50,8 +50,9 @@
                     </div>
                     <div class="col-6 m-auto"> <!-- to do list -->
                         <div class="card p-5  border-black">
-
-                            <ul v-if="tasks.length != 0" class="p-0"> <!-- UL for tasks -->
+                            
+                            <!-- UL for tasks -->
+                            <ul v-if="tasks.length != 0" class="p-0"> 
                                 <li v-for="(task, index) in tasks"
                                  class="border-bottom py-3 d-flex justify-content-between">
                                     <!-- tasks text -->
@@ -62,7 +63,6 @@
                                     <div @click="removeTask(index)">
                                         <i class="fa-solid fa-eraser fa-xl"></i>
                                     </div>
-
                                 </li>
                             </ul>
 
