@@ -32,6 +32,26 @@
     <body>
         <!-- #App vuejs -->
         <div id="app">
+            <div class="container">
+                <h1 class="text-center py-5">
+                    To do List
+                </h1>
+                <div class="row">
+                    <div class="col-8 m-auto">
+                        <div class="card p-5">
+
+
+
+                            <ul>
+                                <li v-for="(task, i) in tasks">
+                                    {{task.text}}
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
 
