@@ -33,20 +33,24 @@
         <!-- #App vuejs -->
         <div id="app">
             <div class="container">
-                <h1 class="text-center py-5">
+                <h1 class="text-center py-5"> <!-- title -->
                     To do List
                 </h1>
                 <div class="row">
-                    <div class="col-8 m-auto">
+                    <div class="col-6 m-auto"> <!-- to do list -->
                         <div class="card p-5">
 
-
-
-                            <ul>
+                            <ul class="p-0"> <!-- UL for tasks -->
                                 <li v-for="(task, i) in tasks"
-                                 class="border-bottom py-3"
-                                 :class="(task.done === true) ? 'done' : '' ">
-                                    {{task.text}}
+                                 class="border-bottom py-3 d-flex justify-content-between">
+                                    <!-- tasks text -->
+                                    <div :class="(task.done === true) ? 'done' : '' ">
+                                        {{task.text}}
+                                    </div>
+                                    <!-- tasks cross -->
+                                    <div>
+                                        <i class="fa-solid fa-eraser fa-xl"></i>
+                                    </div>
                                 </li>
                             </ul>
 
