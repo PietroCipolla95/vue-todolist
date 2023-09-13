@@ -4,4 +4,5 @@ body {
 
 .done {
     text-decoration: line-through;
+    text-decoration-color: lightcoral;
 }

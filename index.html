@@ -37,10 +37,21 @@
                     To do List
                 </h1>
                 <div class="row">
+                    <div class="col-4">
+                        <div class="card p-5 border-black">
+                            <h2 class="py-3">
+                                Aggiungi task
+                            </h2>
+                            <input type="text" name="" id="" class="rounded-2 border-black">
+                            <button type="submit" class="btn btn-dark mt-5 w-50 p-1">
+                                Aggiungi task
+                            </button>
+                        </div>
+                    </div>
                     <div class="col-6 m-auto"> <!-- to do list -->
-                        <div class="card p-5">
+                        <div class="card p-5  border-black">
 
-                            <ul class="p-0"> <!-- UL for tasks -->
+                            <ul v-if="tasks.length != 0" class="p-0"> <!-- UL for tasks -->
                                 <li v-for="(task, index) in tasks"
                                  class="border-bottom py-3 d-flex justify-content-between">
                                     <!-- tasks text -->
@@ -51,6 +62,7 @@
                                     <div @click="removeTask(index)">
                                         <i class="fa-solid fa-eraser fa-xl"></i>
                                     </div>
+
                                 </li>
                             </ul>
 

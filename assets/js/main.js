@@ -46,7 +46,7 @@ const { createApp } = Vue
 
         removeTask(index) {
 
-            this.tasks[index].splice(0 ,1);
+            this.tasks[index].splice(index ,1);
 
         }
 
