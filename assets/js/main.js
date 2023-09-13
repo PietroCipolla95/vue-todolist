@@ -61,6 +61,7 @@ createApp({
 
                 this.tasks.unshift({text : newTask, done : false});
                 this.newTask = '';
+                this.error = false;
 
             } else {
 
