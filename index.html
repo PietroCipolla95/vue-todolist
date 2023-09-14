@@ -37,19 +37,21 @@
                     To do List
                 </h1>
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-4"> <!-- add task -->
                         <div class="card p-5 border-black">
                             <h2 class="py-3">
                                 Aggiungi task
                             </h2>
-                            <input type="text"
+                            <!-- input to add task -->
+                            <input type="text" 
                                 class="rounded-2 border-black"
                                 placeholder="Type a task"
                                 v-model="newTask"
                                 @keyup.enter="addTask(newTask)">
-                                <p v-if="error === true" class="pt-3 text-danger">
+                                <p v-if="error === true" class="pt-3 text-danger"> <!-- error message -->
                                     Il campo è vuoto, inserisci una task!                                    
                                 </p>
+                            <!-- submit for input -->    
                             <button type="submit"
                                 class="btn btn-dark mt-3 w-75 p-1" 
                                 @click="addTask(newTask)">
