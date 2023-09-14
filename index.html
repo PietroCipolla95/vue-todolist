@@ -69,7 +69,7 @@
                                     <!-- tasks text -->
                                     <div
                                         :class="(task.done === true) ? 'done' : '' "
-                                        @click="doneNotDone(index)">
+                                        @click="task.done = !task.done">
                                         {{task.text}}
                                     </div>
                                     <!-- tasks cross -->

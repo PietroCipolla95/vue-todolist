@@ -74,20 +74,6 @@ createApp({
 
         },
 
-        doneNotDone (index) {            
-
-            if (this.tasks[index].done === false) {
-
-                this.tasks[index].done = true;
-                
-            } else {
-
-                this.tasks[index].done = false;
-                
-            }
-                
-        }
-
     }
 
 }).mount('#app')
